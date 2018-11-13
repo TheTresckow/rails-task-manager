@@ -1,0 +1,18 @@
+<div class="container">
+<h1>Edit your task</h1>
+<%= form_for(@task) do |f| %>
+  <%= f.label :Title %>
+  <%= f.text_field :title %>
+  <%= f.label :Details %>
+  <%= f.text_field :details %>
+  <%= f.label :Completed %>
+  <%= f.radio_button :completed, :checked => false %>
+  <%= f.submit  class: "btn btn-success"%>
+<% end %>
+
+
+
+<p><%= link_to "Back to your Tasks", tasks_path, class: "btn btn-primary" %>
+
+</div>
+

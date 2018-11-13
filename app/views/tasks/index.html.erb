@@ -1,0 +1,12 @@
+<div class="container">
+<h1>Index</h1>
+<ul>
+<% @tasks.each do |t| %>
+<li> <%= t.completed == true ? "✅" : "❌"%> - <%= link_to t.title, task_path(t.id) %> - <%= link_to "delete ?",destroy_task_path(t),method: :delete, data: { confirm: "Are you sure?" }  %></li>
+<% end %>
+</ul>
+
+
+<p><%= link_to "Create new task", new_task_path, class: "btn btn-primary" %>
+</div>
+
